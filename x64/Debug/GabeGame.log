@@ -1,5 +1,3 @@
-﻿  ItemSystem.cpp
-C:\Users\hudso\source\repos\GabeGame\GameGame\ItemSystem.cpp(6,18): error C2011: 'ItemSystem': 'class' type redefinition
-C:\Users\hudso\source\repos\GabeGame\GameGame\ItemSystem.h(6,7): message : see declaration of 'ItemSystem'
-  ItemSystem.h
-  Generating Code...
+﻿x64\Debug\PlayerCharacter.obj : warning LNK4042: object specified more than once; extras ignored
+x64\Debug\ItemSystem.obj : warning LNK4042: object specified more than once; extras ignored
+  GabeGame.vcxproj -> C:\Users\hudso\source\repos\GabeGame\GameGame\x64\Debug\GabeGame.exe
