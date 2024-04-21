@@ -1,11 +1,5 @@
 ﻿  ItemSystem.cpp
-  Main.cpp
-C:\Users\hudso\source\repos\GabeGame\GameGame\Main.cpp(13,5): error C2146: syntax error: missing ';' before identifier 'cout'
-C:\Users\hudso\source\repos\GabeGame\GameGame\Main.cpp(19,5): error C2143: syntax error: missing ';' before '}'
-C:\Users\hudso\source\repos\GabeGame\GameGame\Main.cpp(22,5): error C2143: syntax error: missing ';' before '}'
-C:\Users\hudso\source\repos\GabeGame\GameGame\Main.cpp(25,5): error C2143: syntax error: missing ';' before '}'
-  PlayerCharacter.cpp
-C:\Users\hudso\source\repos\GabeGame\GameGame\PlayerCharacter.cpp(5,23): error C2011: 'PlayerCharacter': 'class' type redefinition
-C:\Users\hudso\source\repos\GabeGame\GameGame\PlayerCharacter.h(6,7): message : see declaration of 'PlayerCharacter'
-  PlayerCharacter.h
+C:\Users\hudso\source\repos\GabeGame\GameGame\ItemSystem.cpp(6,18): error C2011: 'ItemSystem': 'class' type redefinition
+C:\Users\hudso\source\repos\GabeGame\GameGame\ItemSystem.h(6,7): message : see declaration of 'ItemSystem'
+  ItemSystem.h
   Generating Code...
