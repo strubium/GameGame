@@ -7,12 +7,23 @@ using namespace std;
 
 int main()
 {
-    PlayerCharacter obj;
-    bool input;
+    PlayerCharacter player1;
+    int input;
+    bool boolInput;
     cout << "Hello World!\n";
     cout << "Are you a boy, or are you a girl? \n I know ive known you for 11 years, but I still honestly don't know!";
     cout << "type 1 for boy, or 2 for girl!";
     cin >> input;
+    if (input == 1) {
+        boolInput = true;
+    }
+    else if (input == 0) {
+        boolInput = 0;
+    }
+    else {
+        boolInput = 1;
+    };
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
