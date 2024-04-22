@@ -18,7 +18,7 @@ public:
     bool getGender();
     std::string getPronounSingular();
     std::string getPronounFellow();
-    void addPlayerAttribute(std::string inputAttribute)
-    void removePlayerAttribute(std::string inputAttribute)
-    bool hasAttribute(std::string inputAttribute)
+    void addPlayerAttribute(std::string inputAttribute);
+    void removePlayerAttribute(std::string inputAttribute);
+    bool hasAttribute(std::string inputAttribute);
 };

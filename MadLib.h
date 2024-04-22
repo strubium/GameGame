@@ -5,6 +5,6 @@ using namespace std;
 
 class MadLib {
     string randomAmount();
-    string responseHighMoral(PlayerCharacter player)
+    string responseHighMoral(PlayerCharacter player);
 
 };
