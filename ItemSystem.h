@@ -7,4 +7,7 @@ using namespace std;
 class ItemSystem {
     int itemDurability;
     string itemName;
+    int itemDamageModifier;
+    bool hasDamageModifier;
+    bool hasDurability;
 };
