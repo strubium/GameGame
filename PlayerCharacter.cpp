@@ -1,4 +1,8 @@
 #include "PlayerCharacter.h"
+#include <vector> 
+
+
+vector<std::string> playerAttributes;
 
 /**
  * @brief Sets the player's name
@@ -41,12 +45,35 @@ bool PlayerCharacter::getGender() {
     return playerGender;
 }
 
+/**
+ * @brief Returns the singular form of the player's pronoun based on their gender.
+ *
+ * @return std::string The singular form of the player's pronoun.
+ */
 std::string PlayerCharacter::getPronounSingular() {
     // Check the player's gender and return the corresponding pronoun
-    return (playerGender ? "he" : "she"); 
+    return (playerGender? "he" : "she"); 
+}
+
+/**
+ * @brief Returns the singular form of the player's pronoun based on their gender.
+ *
+ * @return std::string The singular form of the player's pronoun.
+ */
+std::string PlayerCharacter::getPronounSingular() {
+    // Check the player's gender and return the corresponding pronoun
+    return (playerGender? "he" : "she"); 
 }
 
 std::string PlayerCharacter::getPronounFellow() {
     // Check the player's gender and return the corresponding pronoun
-    return (playerGender ? "fellow" : "fellher");
+    return (playerGender? "fellow" : "fellher");
+}
+/**
+ * @brief Adds an attribute to the player's list of attributes.
+ *
+ * @param inputAttribute The attribute to add to the player's list.
+ */
+void PlayerCharacter::addPlayerAttribute(std::string inputAttribute) {
+    playerAttributes.push_back(inputAttribute);
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 class PlayerCharacter {
 private:
@@ -8,6 +9,7 @@ private:
     // False is female, True is male.
     bool playerGender;
     std::string playerName;
+    vector<std::string> playerAttributes;
 
 public:
     std::string setPlayerName(std::string inputName);
@@ -16,4 +18,5 @@ public:
     bool getGender();
     std::string getPronounSingular();
     std::string getPronounFellow();
+    void addPlayerAttribute(std::string inputAttribute)
 };

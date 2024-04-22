@@ -8,21 +8,28 @@
 
 using namespace std;
 
+/**
+ * @brief Convert an integer to a boolean value
+ * 
+ * @param input The input integer value
+ * @return true if the input is not equal to 0, false otherwise
+ */
 bool convertToBool(int input) {
     bool boolInput;
-    return boolInput = (input != 0);
+    return boolInput = (input!= 0);
 }
 
 
 int main()
 {
     PlayerCharacter player1;
-    int input;
+    int intInput; //Reuseable int input 
+    string stringInput; //Reuseable string input 
     string playername;
     cout << "Are you a boy, or are you a girl? \n I know I've known you for 11 years, but I still honestly don't know! \n";
     cout << "type 1 for boy, or 0 for girl! \n";
-    cin >> input;
-    bool boolInput = convertToBool(input);
+    cin >> intInput;
+    bool boolInput = convertToBool(intInput);
     player1.setGender(boolInput);
     cout << "Well hello there you dastardly " << player1.getPronounFellow() << "!\n";
     cout << "Can you say your name again for me?\n";
