@@ -39,4 +39,13 @@ string MadLib::randomAmount() {
         return "mega";
     }
 }
+/**
+ * @brief Returns a random high moral response
+ * @return A random high moral response
+ */
+string MadLib::responseHighMoral(PlayerCharacter player) {
+        if(player.hasAttribute("gangMember")){
+            return "I don't want any trouble";
+        }
+}
 };

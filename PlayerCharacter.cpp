@@ -77,3 +77,32 @@ std::string PlayerCharacter::getPronounFellow() {
 void PlayerCharacter::addPlayerAttribute(std::string inputAttribute) {
     playerAttributes.push_back(inputAttribute);
 }
+
+/**
+ * @brief Removes an attribute to the player's list of attributes.
+ *
+ * @param inputAttribute The attribute to remove to the player's list.
+ */
+void PlayerCharacter::removePlayerAttribute(std::string inputAttribute) {
+    playerAttributes.erase(inputAttribute);
+}
+
+/**
+ * @brief Check for an attribute in the player's list.
+ *
+ * @param inputAttribute The attribute to check for in the player's list.
+ */
+bool PlayerCharacter::hasAttribute(std::string inputAttribute) {
+      int vecSize = playerAttributes.size();
+
+      // run for loop from 0 to vecSize
+      for(int i = 0; i < vecSize; i++)
+      {
+            if (vec[i] == inputAttribute){
+                return true;
+            }
+            else{
+                return false;
+            }
+      }
+}
