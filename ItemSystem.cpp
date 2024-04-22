@@ -10,4 +10,7 @@ private:
     int ItemSystem::itemDamageModifier = 1;
     bool ItemSystem::hasDamageModifier = true;
     bool ItemSystem::hasDurability = true;
+    bool ItemSystem::isAContainer = false;
+    int ItemSystem::itemID = 0;
+    string ItemSystem::itemDescription = "...";
 };
