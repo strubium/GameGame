@@ -10,4 +10,7 @@ class ItemSystem {
     int itemDamageModifier;
     bool hasDamageModifier;
     bool hasDurability;
+    bool isAContainer;
+    int itemID;
+    string itemDescription;
 };
