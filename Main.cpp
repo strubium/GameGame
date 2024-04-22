@@ -1,4 +1,4 @@
-﻿// GabeGame.cpp : This file contains the 'main' function. Program execution begins and ends there.
+﻿// Main.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
@@ -11,30 +11,11 @@ int main()
     PlayerCharacter player1;
     int input;
     bool boolInput;
+    string playername;
     string pronounHe_Her; // TODO: FIX ME, do me, fix code
-    /*       ██              
-           ██  ██            
-         ▄▄▀▀  ▀▀▄▄          
-       ▄▄██      ▀▀▄▄▄▄      
-     ▗ ▛▛▛▛  ▛▛██      
-      ██              ██      
-      ██  ██    ██    ██      ? no fix the thing it might be that the file is not where the header files are and tahat makight 
-      ██              ██      
-      ██              ██      
-     ▀▀▄▄▄▄▄▄▄▄▙▄▄▄▄███      This is the sigma spirit of whales
-      ███████████▛████      
-     ██            ▜█      
-      ████            ██      
-       ▘██          ▟▟██      
-        ██▄▄▄▄    ▄▄████      
-        ▀▀██▀▀▄▄▄▄▝▀▀▀██    
-          ██    T      ███▘   
-          ██          ██                                
-            */
     string playerFellowOrFellher;
-    cout << "Hello World!\n";
     cout << "Are you a boy, or are you a girl? \n I know ive known you for 11 years, but I still honestly don't know! \n";
-    cout << "type 1 for boy, or 2 for girl! \n";
+    cout << "type 1 for boy, or 0 for girl! \n";
     cin >> input;
     if (input == 1) {
         boolInput = true;
@@ -53,7 +34,10 @@ int main()
         pronounHe_Her = "she";
         playerFellowOrFellher = "fellher";
     };
-    cout << "Well hello there you dastardly " << playerFellowOrFellher << "!";
+    cout << "Well hello there you dastardly " << playerFellowOrFellher << "!\n";
+    cout << "Can you say your name again for me?\n";
+    getline(cin,playername) >> playername;
+    cout << "Nice to remember you " << playername;
 
 }
 
