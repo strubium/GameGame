@@ -7,4 +7,7 @@ class ItemSystem {
 private:
     int ItemSystem::itemDurability = 100;
     string ItemSystem::itemName = "Hand";
+    int ItemSystem::itemDamageModifier = 1;
+    bool ItemSystem::hasDamageModifier = true;
+    bool ItemSystem::hasDurability = true;
 };
