@@ -1,5 +1,6 @@
 #include <string>
 #include "MadLib.h"
+#include "PlayerCharacter.h"
 #include <random>
 #include <cmath>
 #include <iostream>
@@ -9,7 +10,6 @@ using namespace std;
 class MadLib {
 /**
  * @brief Returns a random amount adverb
- * @details This function generates a random number between 0 and 3, rounds it to the nearest integer, and returns one of the four adverbs "really", "super", "mega", or "ultra" based on the resulting number. If the random number is outside the range of 0 and 3, the adverb "mega" is returned.
  * @return A random adverb
  */
 string MadLib::randomAmount() {
