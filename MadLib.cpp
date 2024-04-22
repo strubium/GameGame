@@ -47,5 +47,8 @@ string MadLib::responseHighMoral(PlayerCharacter player) {
         if(player.hasAttribute("gangMember")){
             return "I don't want any trouble";
         }
+        else if(player.hasAttribute("gangMember") and player.hasAttribute("knownWidely")){
+            return "Holy shit, I don't want any trouble";
+        }
 }
 };
