@@ -1,4 +1,5 @@
 #include <string>
+#include "MadLib.h"
 #include <random>
 #include <cmath>
 #include <iostream>
@@ -6,11 +7,11 @@ using namespace std;
 
 
 class MadLib {
-    string randomAmount() {
+    string MadLib::randomAmount() {
         random_device rd;
         mt19937 gen(rd());
 
-        uniform_real_distribution<> dis(0.0, 2.0);
+        uniform_real_distribution<> dis(0.0, 3.0);
 
         double randomNumber = dis(gen);
 
@@ -23,8 +24,14 @@ class MadLib {
         case 2:
             return "super";
             break;
+        case 3:
+            return "mega";
+            break;
+        case 4:
+            return "ultra";
+            break;
         default:
-            return "really";
+            return "mega";
         }
     }
 };

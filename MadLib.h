@@ -4,9 +4,6 @@
 using namespace std;
 
 class MadLib {
-    
-
-
-
+    string randomAmount();
 
 };

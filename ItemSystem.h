@@ -3,13 +3,8 @@
 #include <functional>
 using namespace std;
 
+
 class ItemSystem {
-private:
     int itemDurability;
     string itemName;
-    
-
-
-
-
 };

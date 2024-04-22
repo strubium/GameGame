@@ -1,22 +1,30 @@
 #include "PlayerCharacter.h"
-#include <iostream>
-#include <functional>
-using namespace std;
-class PlayerCharacter {
-private:
-    double PlayerCharacter::playerMaxHealth = 100;
-    double PlayerCharacter::playerCurrentHealth = 100;
-    //False is female, True is male.
-    bool PlayerCharacter::playerGender;
 
-public:
+std::string PlayerCharacter::setPlayerName(std::string inputName) {
+    playerName = inputName;
+    return playerName; // Return the assigned name
+}
 
-    bool PlayerCharacter::setPlayerGender(bool inputGender) { //sets the gender of the player
-        playerGender = inputGender;
-    }
+std::string PlayerCharacter::getPlayerName() {
+    return playerName; // Return the assigned name
+}
 
-    bool PlayerCharacter::returnGender() { //gets the gender of the player
-        return playerGender;
-    }
 
-};
+bool PlayerCharacter::setGender(bool inputGender) {
+    playerGender = inputGender;
+    return playerGender; // Return the assigned gender
+}
+
+bool PlayerCharacter::getGender() {
+    return playerGender;
+}
+
+std::string PlayerCharacter::getPronounSingular() {
+    // Check the player's gender and return the corresponding pronoun
+    return (playerGender ? "he" : "she"); 
+}
+
+std::string PlayerCharacter::getPronounFellow() {
+    // Check the player's gender and return the corresponding pronoun
+    return (playerGender ? "fellow" : "fellher");
+}
