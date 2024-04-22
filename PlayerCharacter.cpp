@@ -1,5 +1,7 @@
 #include "PlayerCharacter.h"
 #include <vector> 
+using namespace std;
+
 
 
 vector<std::string> playerAttributes;
@@ -55,16 +57,6 @@ std::string PlayerCharacter::getPronounSingular() {
     return (playerGender? "he" : "she"); 
 }
 
-/**
- * @brief Returns the singular form of the player's pronoun based on their gender.
- *
- * @return std::string The singular form of the player's pronoun.
- */
-std::string PlayerCharacter::getPronounSingular() {
-    // Check the player's gender and return the corresponding pronoun
-    return (playerGender? "he" : "she"); 
-}
-
 std::string PlayerCharacter::getPronounFellow() {
     // Check the player's gender and return the corresponding pronoun
     return (playerGender? "fellow" : "fellher");
@@ -84,7 +76,7 @@ void PlayerCharacter::addPlayerAttribute(std::string inputAttribute) {
  * @param inputAttribute The attribute to remove to the player's list.
  */
 void PlayerCharacter::removePlayerAttribute(std::string inputAttribute) {
-    playerAttributes.erase(inputAttribute);
+    playerAttributes.erase(find(playerAttributes.begin(), playerAttributes.end(), inputAttribute));
 }
 
 /**
@@ -98,7 +90,7 @@ bool PlayerCharacter::hasAttribute(std::string inputAttribute) {
       // run for loop from 0 to vecSize
       for(int i = 0; i < vecSize; i++)
       {
-            if (vec[i] == inputAttribute){
+            if (playerAttributes[i] == inputAttribute){
                 return true;
             }
             else{
