@@ -6,5 +6,6 @@
 class MadLib {
 public:
     std::string randomAmount();
+    std::string randomDescriber();
     std::string responseHighMoral(PlayerCharacter player);
 };

@@ -23,6 +23,22 @@ std::string MadLib::randomAmount() {
     }
 }
 
+std::string MadLib::randomDescriber() {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<> dis(0.0, 1.0);
+    double randomNumber = dis(gen);
+    int roundedNumber = std::round(randomNumber);
+    switch (roundedNumber) {
+    case 0:
+        return "dastardly";
+    case 1:
+        return "bold";
+    default:
+        return "dastardly"; // This should never be reached
+    }
+}
+
 std::string MadLib::responseHighMoral(PlayerCharacter player) {
     if (player.hasAttribute("gangMember") && player.hasAttribute("knownWidely")) {
         return "Holy shit, I don't want any trouble";
