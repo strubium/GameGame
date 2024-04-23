@@ -14,6 +14,7 @@ private:
     int npcID = 0; //Internal ID for the NPC.
     string npcType = "dude"; //Types: army, gang1, gang2, gang3, gang4, gang5, civilian1, civilian2, civilian3
     bool npcGender = true; //true = male, false = female
+    float tempDecreaseRate = 3.5;
 
 public:
     int getClothesArmorLevel() { return clothesArmorLevel; }
@@ -22,11 +23,11 @@ public:
 
 
     void updateBodyTemperature() {
-    if wet(true) {
-    float tempDecreaseRate = 6.7;
+    if (wet = true) {
+    tempDecreaseRate = 6.7;
     }
     else {
-    float tempDecreaseRate = 3.5;
+    tempDecreaseRate = 3.5;
     }
 
     bodyTemperature -= (tempDecreaseRate-clothesInsulationLevel);
