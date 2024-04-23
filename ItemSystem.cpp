@@ -13,4 +13,8 @@ private:
     bool ItemSystem::isAContainer = false;
     int ItemSystem::itemID = 0;
     string ItemSystem::itemDescription = "...";
+public:
+    void createItem(string itemName, int itemDamageModifier, bool hasDamageModifier, bool hasDurability, int itemDurability, bool isAContainer, int itemID, string itemDescription){
+
+    }
 };
