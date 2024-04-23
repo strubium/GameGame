@@ -10,8 +10,8 @@ private:
     bool wet = false;
     int money = 25; //STC, money system not decided yet
     int moralLevel = 3; //3 High, 2 Medium, 1 Low, 0 Dead
-    string npcName = "gabe";
-    int npcID = 0;
+    string npcName = "gabe"; //This is the name of the NPC that other NPCs will use refer to this NPC.
+    int npcID = 0; //Internal ID for the NPC.
     string npcType = "dude"; //Types: army, gang1, gang2, gang3, gang4, gang5, civilian1, civilian2, civilian3
     bool npcGender = true; //true = male, false = female
 
