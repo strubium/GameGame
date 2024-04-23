@@ -1,3 +1,0 @@
-﻿x64\Debug\PlayerCharacter.obj : warning LNK4042: object specified more than once; extras ignored
-x64\Debug\ItemSystem.obj : warning LNK4042: object specified more than once; extras ignored
-  GabeGame.vcxproj -> C:\Users\hudso\source\repos\GabeGame\GameGame\x64\Debug\GabeGame.exe
