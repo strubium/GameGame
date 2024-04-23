@@ -40,7 +40,7 @@ string MadLib::randomAmount() {
     }
 }
 /**
- * @brief Returns a random high moral response
+ * @brief Returns a random "high moral" response
  * @return A random high moral response
  */
 string MadLib::responseHighMoral(PlayerCharacter player) {
@@ -49,6 +49,9 @@ string MadLib::responseHighMoral(PlayerCharacter player) {
         }
         else if(player.hasAttribute("gangMember") and player.hasAttribute("knownWidely")){
             return "Holy shit, I don't want any trouble";
+        }
+        else if(player.hasAttribute("doesGood") and player.hasAttribute("knownWidely")){
+                return "There "+std::to_string(getPronounSingular()) + "is!";
         }
 }
 };
