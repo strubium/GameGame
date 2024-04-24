@@ -30,5 +30,14 @@
 *.exe
 *.out
 *.app
-/x64/Debug
+
+#VS Code 
+/x64
 /.vs
+/.vscode
+
+#IntelliJ
+/.idea
+
+#MacOS
+.DS_Store
