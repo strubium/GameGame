@@ -26,7 +26,7 @@ std::string MadLib::randomAmount() {
 std::string MadLib::randomDescriber() {
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_real_distribution<> dis(0.0, 1.0);
+    std::uniform_real_distribution<> dis(0.0, 2.0);
     double randomNumber = dis(gen);
     int roundedNumber = std::round(randomNumber);
     switch (roundedNumber) {
@@ -34,6 +34,8 @@ std::string MadLib::randomDescriber() {
         return "dastardly";
     case 1:
         return "bold";
+    case 2:
+        return "exquisite";
     default:
         return "dastardly"; // This should never be reached
     }
@@ -48,6 +50,9 @@ std::string MadLib::responseHighMoral(PlayerCharacter player) {
     }
     else if (player.hasAttribute("doesGood") && player.hasAttribute("knownWidely")) {
         return "There " + player.getPronounSingular() + " is!";
+    }
+    else if (player.hasAttribute("doesGood")) {
+        return "Keep up the work!";
     }
     // Ensure that you return a string in all cases.
     return ""; // You might want to handle this differently based on your design.

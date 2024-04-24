@@ -20,6 +20,11 @@ bool convertToBool(int input) {
 }
 
 
+void intItems() {
+    ItemSystem fireAxe;
+}
+
+
 int main()
 {
     PlayerCharacter player1;
@@ -28,6 +33,7 @@ int main()
     string playername;
     MadLib madLibInstance; // The MadLib instance
 
+    intItems();
     cout << "Are you a boy, or are you a girl?\n";
     cout << "I know I've known you for 11 years, but I still honestly don't know!\n";
     cout << "Type 1 for boy, or 0 for girl!\n";

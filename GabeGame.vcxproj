@@ -27,6 +27,7 @@
 	<ClCompile Include="PlayerCharacter.h" />
 	<ClCompile Include="ItemSystem.h" />
 	<ClCompile Include="AISystem.cpp" />
+	<ClCompile Include="AISystem.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
