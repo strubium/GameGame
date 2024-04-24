@@ -10,5 +10,6 @@ int ItemSystem::itemID = 0;
 std::string ItemSystem::itemDescription = "...";
 
 void ItemSystem::createItem(std::string itemName, int itemDamageModifier, bool hasDamageModifier, bool hasDurability, int itemDurability, bool isAContainer, int itemID, std::string itemDescription) {
-    // Implementation of createItem method goes here
+    // Implementation of createItem method goes here 
+    // If this is a constructor wouldnt it be more efficient to make it so?
 }
