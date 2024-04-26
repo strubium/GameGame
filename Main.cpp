@@ -26,16 +26,19 @@ int main()
     int intInput; //Reuseable int input 
     string stringInput; //Reuseable string input 
     string playername;
-    cout << "Are you a boy, or are you a girl? \n I know I've known you for 11 years, but I still honestly don't know! \n";
+    cout << "'Hello? Stranger, are you there?' \n";
     cout << "type 1 for boy, or 0 for girl! \n";
     cin >> intInput;
+    cout << "Glimpses of your memories return, small but significant when compared to the prior blank slate. \n";
     bool boolInput = convertToBool(intInput);
     player1.setGender(boolInput);
-    cout << "Well hello there you dastardly " << player1.getPronounFellow() << "!\n";
-    cout << "Can you say your name again for me?\n";
+    cout << "'Well hello there you dastardly " << player1.getPronounFellow() << "!'\n";
+    cout << "'Can you say your name again for me?'\n";
     getline(cin, playername) >> playername;
     player1.setPlayerName(playername);
-    cout << "Nice to remember you " << player1.getPlayerName() << "!\n";
+    cout << "'Nice to remember you " << player1.getPlayerName() << "!'\n";
+    cout << "'It takes strength and endurance to survive these wastes, you seem to have been banged up pretty bad stranger...' \n";
+    cout << "The wounds twist with pain. \n";
 
 }
 
