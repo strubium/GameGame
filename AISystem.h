@@ -13,6 +13,7 @@ private:
     static std::string npcName; // This is the name of the NPC that other NPCs will use refer to this NPC.
     static int npcID; // Internal ID for the NPC.
     static std::string npcType; // Types: army, gang1, gang2, gang3, gang4, gang5, civilian1, civilian2, civilian3
+    int heldItemID = 1;
     static bool npcGender; // true = male, false = female
     static float tempDecreaseRate;
 
