@@ -6,10 +6,15 @@ int ItemSystem::itemDamageModifier = 1;
 bool ItemSystem::hasDamageModifier = true;
 bool ItemSystem::hasDurability = true;
 bool ItemSystem::isAContainer = false;
+bool ItemSystem::isArmor = false;
+int ItemSystem::ArmorLevel = 0;
 int ItemSystem::itemID = 0;
 std::string ItemSystem::itemDescription = "...";
 
-void ItemSystem::createItem(std::string itemName, int itemDamageModifier, bool hasDamageModifier, bool hasDurability, int itemDurability, bool isAContainer, int itemID, std::string itemDescription) {
-    // Implementation of createItem method goes here 
-    // If this is a constructor wouldnt it be more efficient to make it so?
+void ItemSystem::ItemSystem(std::string input_itemName, int input_itemDamageModifier, bool input_hasDamageModifier, bool input_hasDurability, int input_itemDurability, bool input_isAContainer, int input_itemID, std::string input_itemDescription) {
+    itemName = input_itemName;
+    itemDamageModifier = input_itemDamageModifier;
+    hasDamageModifier = input_hasDamageModifier
+    hasDurability = input_hasDurability
+    itemDurability = input_itemDurability
 }
