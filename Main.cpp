@@ -39,6 +39,7 @@ int main()
     cout << "'Nice to remember you " << player1.getPlayerName() << "!'\n";
     cout << "'It takes strength and endurance to survive these wastes, you seem to have been banged up pretty bad stranger...' \n";
     cout << "The wounds twist with pain. \n";
+    cout << "'I've bandaged what I can, as you've certainly noticed I don't have much for the pain. You can sit here and die which you will if you do so, or you can get up and come with me. \n";
 
 }
 
