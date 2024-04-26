@@ -3,17 +3,21 @@
 #include <functional>
 using namespace std;
 
-    int AISystem::clothesArmorLevel = 1; //0-3, these could (and prob should) be handled by ItemSystem
-    int AISystem::clothesInsulationLevel = 1; //0-10
-    float AISystem::bodyTemperature = 60; //Body temperature will be affected by clothesInsulationLevel and if they are by a campfire or inside.
-    bool AISystem::wet = false;
-    int AISystem::money = 25; //STC, money system not decided yet
-    int AISystem::moralLevel = 3; //3 High, 2 Medium, 1 Low, 0 Dead
-    string AISystem::npcName = "gabe"; //This is the name of the NPC that other NPCs will use refer to this NPC.
-    int AISystem::npcID = 0; //Internal ID for the NPC.
-    string AISystem::npcType = "dude"; //Types: army, gang1, gang2, gang3, gang4, gang5, civilian1, civilian2, civilian3
-    bool AISystem::npcGender = true; //true = male, false = female
-    float AISystem::tempDecreaseRate = 3.5;
+class AISystem { // Will handle the AI for human NPCs (Ex: not zombies or dogs)
+private:
+    int clothesArmorLevel = 1; //0-3, these could (and prob should) be handled by ItemSystem
+    int clothesInsulationLevel = 1; //0-10
+    float bodyTemperature = 60; //Body temperature will be affected by clothesInsulationLevel and if they are by a campfire or inside.
+    bool wet = false;
+    int money = 25; //STC, money system not decided yet
+    int moralLevel = 3; //3 High, 2 Medium, 1 Low, 0 Dead
+    string npcName = "gabe"; //This is the name of the NPC that other NPCs will use refer to this NPC.
+    int npcID = 0; //Internal ID for the NPC.
+    string npcType = "dude"; //Types: army, gang1, gang2, gang3, gang4, gang5, civilian1, civilian2, civilian3
+    bool npcGender = true; //true = male, false = female
+    float tempDecreaseRate = 3.5;
+    double MaxNPCHealth = 100; //no need for mass floatation we will say have thousands of values but not really the case if you know what you are doing.
+    double CurrentNPCHealth = 100;
 
     int AISystem::getClothesArmorLevel() { return clothesArmorLevel; }
     int AISystem::getClothesInsulationLevel() { return clothesInsulationLevel; }
@@ -27,6 +31,6 @@ using namespace std;
     else {
     AISystem::tempDecreaseRate = 3.5;
     }
-
     AISystem::bodyTemperature -= (AISystem::tempDecreaseRate- AISystem::clothesInsulationLevel);
     }
+};

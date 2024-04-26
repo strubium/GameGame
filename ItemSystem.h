@@ -4,12 +4,17 @@
 
 class ItemSystem {
 private:
-    static float itemDurability;
-    static std::string itemName;
-    static int itemDamageModifier;
-    static bool hasDamageModifier;
-    static bool hasDurability;
-    static bool isAContainer;
-    static int itemID;
-    static std::string itemDescription;
+    int itemDurability;
+    std::string itemName;
+    int itemDamageModifier;
+    bool hasDamageModifier;
+    bool hasDurability;
+    bool isAContainer;
+    bool isArmor;
+    int ArmorLevel;
+    int itemID;
+    std::string itemDescription;
+
+public:
+    void ItemSystem(std::string input_itemName, int input_itemDamageModifier, bool input_hasDamageModifier, bool input_hasDurability, int input_itemDurability, bool input_isAContainer, int input_itemID, std::string input_itemDescription);
 };
