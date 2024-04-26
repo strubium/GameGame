@@ -1,12 +1,11 @@
-#pragma once //stuff for the header file, btw this is a header file
+#pragma once
+
 #include <string>
-#include <functional>
 #include "PlayerCharacter.h"
 
-using namespace std;
-
 class MadLib {
-    string randomAmount();
-    string responseHighMoral(PlayerCharacter player);
-
+public:
+    std::string randomAmount();
+    std::string randomDescriber();
+    std::string responseHighMoral(PlayerCharacter player);
 };

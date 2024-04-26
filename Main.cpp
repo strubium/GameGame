@@ -20,11 +20,16 @@ bool convertToBool(int input) {
 }
 
 
+void intItems() {
+    ItemSystem fireAxe;
+}
+
+
 int main()
 {
     PlayerCharacter player1;
-    int intInput; //Reuseable int input 
-    string stringInput; //Reuseable string input 
+    int intInput; // Reusable int input 
+    string stringInput; // Reusable string input 
     string playername;
     cout << "'Hello? Stranger, are you there?' \n";
     cout << "type 1 for boy, or 0 for girl! \n";
@@ -41,6 +46,7 @@ int main()
     cout << "The wounds twist with pain. \n";
     cout << "'I've bandaged what I can, as you've certainly noticed I don't have much for the pain. You can sit here and die which you will if you do so, or you can get up and come with me. \n";
 
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu 

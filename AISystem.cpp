@@ -1,3 +1,4 @@
+#include "AISystem.h"
 #include <iostream>
 #include <functional>
 using namespace std;
@@ -18,20 +19,18 @@ private:
     double MaxNPCHealth = 100; //no need for mass floatation we will say have thousands of values but not really the case if you know what you are doing.
     double CurrentNPCHealth = 100;
 
-public:
-    int getClothesArmorLevel() { return clothesArmorLevel; }
-    int getClothesInsulationLevel() { return clothesInsulationLevel; }
-    float getBodyTemperature() { return bodyTemperature; }
+    int AISystem::getClothesArmorLevel() { return clothesArmorLevel; }
+    int AISystem::getClothesInsulationLevel() { return clothesInsulationLevel; }
+    float AISystem::getBodyTemperature() { return bodyTemperature; }
 
 
-    void updateBodyTemperature() {
-    if (wet = true) {
-    tempDecreaseRate = 6.7;
+    void AISystem::updateBodyTemperature() {
+    if (AISystem::wet = true) {
+    AISystem::tempDecreaseRate = 6.7;
     }
     else {
-    tempDecreaseRate = 3.5;
+    AISystem::tempDecreaseRate = 3.5;
     }
-
-    bodyTemperature -= (tempDecreaseRate-clothesInsulationLevel);
+    AISystem::bodyTemperature -= (AISystem::tempDecreaseRate- AISystem::clothesInsulationLevel);
     }
 };

@@ -1,6 +1,6 @@
 #include "ItemSystem.h"
 
-int ItemSystem::itemDurability = 100;
+float ItemSystem::itemDurability = 100;
 std::string ItemSystem::itemName = "Hand";
 int ItemSystem::itemDamageModifier = 1;
 bool ItemSystem::hasDamageModifier = true;

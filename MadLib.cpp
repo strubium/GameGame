@@ -1,57 +1,59 @@
-#include <string>
 #include "MadLib.h"
 #include "PlayerCharacter.h"
 #include <random>
 #include <cmath>
-#include <iostream>
-using namespace std;
 
-
-class MadLib {
-/**
- * @brief Returns a random amount adverb
- * @return A random adverb
- */
-string MadLib::randomAmount() {
-    random_device rd;
-    mt19937 gen(rd());
-
-    uniform_real_distribution<> dis(0.0, 3.0);
-
+std::string MadLib::randomAmount() {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<> dis(0.0, 3.0);
     double randomNumber = dis(gen);
-
-    // Round the number
-    int roundedNumber = round(randomNumber);
+    int roundedNumber = std::round(randomNumber);
     switch (roundedNumber) {
     case 0:
         return "really";
-        break;
     case 1:
         return "super";
-        break;
     case 2:
         return "mega";
-        break;
     case 3:
         return "ultra";
-        break;
     default:
-        return "mega";
+        return "mega"; // This should never be reached
     }
 }
-/**
- * @brief Returns a random "high moral" response
- * @return A random high moral response
- */
-string MadLib::responseHighMoral(PlayerCharacter player) {
-        if(player.hasAttribute("gangMember")){
-            return "I don't want any trouble";
-        }
-        else if(player.hasAttribute("gangMember") and player.hasAttribute("knownWidely")){
-            return "Holy shit, I don't want any trouble";
-        }
-        else if(player.hasAttribute("doesGood") and player.hasAttribute("knownWidely")){
-                return "There "+std::to_string(getPronounSingular()) + "is!";
-        }
+
+std::string MadLib::randomDescriber() {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<> dis(0.0, 2.0);
+    double randomNumber = dis(gen);
+    int roundedNumber = std::round(randomNumber);
+    switch (roundedNumber) {
+    case 0:
+        return "dastardly";
+    case 1:
+        return "bold";
+    case 2:
+        return "exquisite";
+    default:
+        return "dastardly"; // This should never be reached
+    }
 }
-};
+
+std::string MadLib::responseHighMoral(PlayerCharacter player) {
+    if (player.hasAttribute("gangMember") && player.hasAttribute("knownWidely")) {
+        return "Holy shit, I don't want any trouble";
+    }
+    else if (player.hasAttribute("gangMember")) {
+        return "I don't want any trouble";
+    }
+    else if (player.hasAttribute("doesGood") && player.hasAttribute("knownWidely")) {
+        return "There " + player.getPronounSingular() + " is!";
+    }
+    else if (player.hasAttribute("doesGood")) {
+        return "Keep up the work!";
+    }
+    // Ensure that you return a string in all cases.
+    return ""; // You might want to handle this differently based on your design.
+}
