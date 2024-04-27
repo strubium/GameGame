@@ -1,4 +1,5 @@
 #include "AISystem.h"
+#include "ItemSystem.h"
 #include <iostream>
 #include <functional>
 using namespace std;
@@ -16,6 +17,7 @@ private:
     string npcType = "dude"; //Types: army, gang1, gang2, gang3, gang4, gang5, civilian1, civilian2, civilian3
     bool npcGender = true; //true = male, false = female
     float tempDecreaseRate = 3.5;
+    int heldItemID = 1;
     double MaxNPCHealth = 100; //no need for mass floatation we will say have thousands of values but not really the case if you know what you are doing.
     double CurrentNPCHealth = 100;
 
