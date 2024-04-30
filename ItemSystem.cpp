@@ -11,10 +11,16 @@ int ItemSystem::ArmorLevel = 0;
 int ItemSystem::itemID = 0;
 std::string ItemSystem::itemDescription = "...";
 
-void ItemSystem::ItemSystem(std::string input_itemName, int input_itemDamageModifier, bool input_hasDamageModifier, bool input_hasDurability, int input_itemDurability, bool input_isAContainer, int input_itemID, std::string input_itemDescription) {
+void ItemSystem::ItemSystem(std::string input_itemName, int input_itemDamageModifier, bool input_hasDamageModifier, 
+bool input_hasDurability, int input_itemDurability, bool input_isAContainer, int input_itemID, std::string input_itemDescription, bool input_isArmor, int input_ArmorLevel) {
     itemName = input_itemName;
     itemDamageModifier = input_itemDamageModifier;
     hasDamageModifier = input_hasDamageModifier;
     hasDurability = input_hasDurability;
     itemDurability = input_itemDurability;
+    isAContainer = input_isAContainer;
+    isArmor = input_isArmor;
+    ArmorLevel = input_ArmorLevel;
+    itemDescription = input_itemDescription;
+    itemID = input_itemID;
 }
